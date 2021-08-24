@@ -1,0 +1,240 @@
+.resp-tabs-list li {
+    position: relative;
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 25px;
+    line-height: 1.25;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    background-color: #001c54;
+    color: #ffffff;
+    border-color: #ffd01e;
+    width: 13.5%;
+    text-align: center;
+    min-height: 47px;
+    border-radius: 10px;
+    margin: 0;
+    margin-right: 1%;
+    margin-bottom: 5px;
+    padding: 15px 12px;
+}
+
+.resp-tab-item:before,
+.resp-tab-item::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 3px solid transparent;
+}
+
+#verticalTab .resp-tabs-list li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.resp-tabs-list li:last-child {
+    margin-right: 0;
+}
+
+.resp-tabs-container {
+    padding: 0px;
+    clear: left;
+    padding-right: 0px;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+    padding: 0px;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    padding: 16px 40.8px;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    border: 1px solid #123479 !important;
+    background-color: #1b3d80 !important;
+    color: #ffffff !important;
+}
+
+
+
+.resp-content-active,
+.resp-accordion-active {
+    display: block;
+}
+
+h2.resp-accordion {
+    font-size: 20px;
+    color: #001c54;
+    border: 1px solid #001c54;
+    border-top: 0px solid #c1c1c1;
+    margin: 0px;
+    padding: 15px 15px;
+}
+
+h2.resp-tab-active {
+    border-bottom: 0px solid #c1c1c1 !important;
+    margin-bottom: 0px !important;
+    padding: 15px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1 !important;
+    background: blue;
+}
+
+
+/-----------Vertical tabs-----------/
+
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 27%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 15px 15px !important;
+    margin: 0;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    border: 0;
+    float: left;
+    width: 73%;
+    min-height: 250px;
+    border-radius: 0px;
+    clear: none;
+}
+
+#verticalTab {
+    position: relative;
+}
+
+#verticalTab.resp-vtabs .resp-tabs-container {
+    width: 100%;
+}
+
+#verticalTab.resp-vtabs ul.resp-tabs-list {
+    position: absolute;
+    top: 0px;
+    width: 27%;
+    z-index: 2;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-right: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: 0px !important;
+    padding: 14px 15px 15px 14px !important;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #001c54;
+}
+
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #FFF;
+}
+
+
+/-----------Accordion styles-----------/
+
+h2.resp-tab-active {
+    background: #001c54 !important;
+}
+
+.resp-easy-accordion h2.resp-accordion {
+    display: block;
+}
+
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+h2.resp-accordion:first-child {
+    border-top: 1px solid #001c54 !important;
+}
+
+
+/Here your can change the breakpoint to set the accordion, when screen resolution changed/
+
+@media only screen and (max-width:1199px) {
+    .resp-tabs-list li {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+    h2.resp-accordion {
+        position: relative;
+        display: block;
+        font-size: 18px;
+    }
+    h2.resp-tab-active {
+        color: #ffffff !important;
+    }
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid #C1C1C1;
+    }
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display: none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid #c1c1c1 !important;
+    }
+}

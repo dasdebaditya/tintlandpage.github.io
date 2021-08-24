@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="OnlineApp" ng-controller="OnlineCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Robots" content="noindex, nofollow" />
+    <title>Techno International New town (Formerly Known as Techno India College of Technology)</title>
+    <!-- favicon -->
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logos/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logos/favicon-16x16.png">
+    <link rel="manifest" href="images/logos/site.webmanifest">
+    <!-- easy-responsive -->
+    <link rel="stylesheet" href="css/tab/easy-responsive-tabs.css">
+    <!-- custom CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- fancybox -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <!-- owl -->
+    <link rel="stylesheet" href="css/carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/carousel/owl.theme.default.min.css">
+    <!-- TABS CSS START -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <!-- Animate CSS START -->
+    <link rel="stylesheet" href="css/popup/magnific-popup.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- validationEngine -->
+    <link rel="stylesheet" href="js/form/validationEngine.jquery.css" />
+    <!-- WEB FONTS -->
+    <link href="fonts/stylesheet.css" rel="stylesheet">
+    <!-- FONTS AWSMA FONTS -->
+    <link rel="stylesheet" href="fonts/fonticon/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/ladda-themeless.min.css">
+    <!-- mycustom-css -->
+    <!-- <link href="css/mycustom.css" rel="stylesheet"> -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .owl-prev,
+        .owl-next {
+            display: none;
+        }
+
+        .aplybtnsec {
+            display: none;
+        }
+
+        .fa {
+            display: none;
+        }
+
+        .message,
+        .help-block {
+            color: #ee0101 !important;
+            float: right;
+            margin: 3px auto;
+        }
+
+        .parallax {
+            position: relative;
+            min-height: 100%;
+            background-image: url(images/TINT.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding-top: 110px;
+        }
+
+        @media only screen and (max-width:767px) {
+            .parallax {
+                padding-top: 0px;
+            }
+
+            .dist_text {
+                font-size: small;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            url = new URL(window.location.href);
+            var campaign_name = url.searchParams.get("utm_campaign");
+            var keyword = url.searchParams.get("utm_keyword");
+            var source = url.searchParams.get("utm_source");
+            var network = url.searchParams.get("utm_network");
+            document.getElementById("campaign_url").value = window.location.href;
+            document.getElementById("campaign_name").value = campaign_name;
+            document.getElementById("keyword").value = keyword;
+            document.getElementById("sourceId").value = source;
+            document.getElementById("network").value = network;
+            document.getElementById("utm_campaign").value = campaign_name;
+            document.getElementById("utm_keyword").value = keyword;
+            document.getElementById("utm_source").value = source;
+            document.getElementById("utm_network").value = network;
+            if (document.referrer) {
+                var myReferer = document.referrer;
+                document.getElementById("referrerid").value = myReferer;
+            }
+            else {
+                document.getElementById("referrerid").value = 'None';
+            }
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2GRJY1XYX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S2GRJY1XYX');
+    </script>
+</head>
+
+<body ng-init="getState()">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZGWW6R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Pre Loader start -->
+    <div class="loader">
+        <div class="loader-inner line-scale-pulse-out-rapid">
+            <img src="images/logos/logo.png" alt="logo" />
+            <br />
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Pre Loader end -->
+
+    <!-- HEADER START -->
+    <header id="header" class="header">
+        <div id="inner" class="commoninner clearfix">
+            <div class="col-sm-6 col-xs-12 logo text-left">
+                <img class="img-responsive desktoplogo hidden-xs" src="images/logos/logo.png" alt="brand-desktop-logo" /
+                    width="120px" />
+                <img class="img-responsive moblogo visible-xs" src="images/logos/logo.png" alt="brand-mobile-logo"
+                    width="120px" />
+            </div>
+            <!-- <div style="display: flex; flex-wrap: wrap; justify-content: center;"  class="col-sm-6 col-xs-12 dist_text">
+                    <span style="margin-right:3px;" ><a style="border-radius: 10px;" href="#course">Courses</a> </span>
+                    <span style="margin-right:3px;" ><a style="border-radius: 10px;" href="#Almuni">Almuni</a> </span>
+                    <span style="margin-right:3px;" ><a style="border-radius: 10px;" href="#About">About</a> </span>
+                    <span style="margin-right:3px;" ><a style="border-radius: 10px;" href="#contact">Contact</a> </span>
+                    
+                </div> -->
+
+        </div>
+    </header>
+    <!-- hero START -->
+    <div class="commonbanner">
+        <main class="dsu-main-content">
+            <div class="bannerBox parallax">
+                <div class="cd-intro">
+                    <div class="dsu-intro">
+                        <div id="inner3" class="commoninner clearfix dflexSTRHstart2">
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 nopd">
+                                <div class="dsu-addmission">
+                                    <div class="headingone">
+                                        <h1 class="wow fadeInUp">
+                                            <span>
+                                                <small>Admissions Open</small>
+                                            </span>
+                                        </h1>
+                                    </div>
+                                    <div class="headingtwo">
+                                        <h2 class="wow fadeInUp">
+                                            <span style="padding: 5px;">B.Tech </span>
+                                            <span style="padding: 5px;">BCA </span>
+                                            <span style="padding: 5px;">B.Sc. </span>
+                                            <br>
+                                            <span style="padding: 5px;">BBA </span>
+                                            <span style="padding: 5px;">MCA </span>
+                                            <br>
+                                            <span style="padding: 5px;">MBA </span>
+                                            <span style="padding: 5px;">M.Tech </span>
+                                            
+
+
+
+
+                                        </h2>
+                                    </div>
+                                    <h1>
+                                        <span class="d-nonne">
+                                            <small style="margin-top: 30px;font-size: 170%;">Techno International New
+                                                Town</small>
+                                            <br>
+                                            <br>
+                                            <i style="font-weight: 200px; font-size: 100%;">(Formerly known as Techno
+                                                India College of Technology)</i>
+                                        </span>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 nopd">
+                                <div id="applyBox" class="applyBox wow zoomIn" data-wow-delay=".5s">
+                                    <div style="opacity: 0;pointer-events: none;" class="dsu-form d-none">
+                                        <div class="frmBg">
+
+                                        </div>
+                                        <div class="contact_fild">
+                                            <form id="formID" class="bg-whitex p-4 form-br-rdus"
+                                                name="onlineEnquiryForm" ng-submit="onlineEnquirySubmit()" novalidate
+                                                ng-cloak>
+                                                <div class="form-row formIDfid">
+                                                    <div class="col-md-12">
+                                                        <div class="row justify-content-center">
+                                                            <div class="contact-fild-box">
+                                                                <div class="form-group"
+                                                                    ng-class="{ 'has-error': (onlineEnquiryForm.$submitted || onlineEnquiryForm.name.$touched)}">
+                                                                    <input type="text" name="name" ng-model="name"
+                                                                        class="form-control" placeholder="Name*"
+                                                                        autocomplete="off" required>
+                                                                    <span class="help-block floating"
+                                                                        ng-show="onlineEnquiryForm.$submitted || onlineEnquiryForm.name.$touched">
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.name.$error.required">Enter
+                                                                            your First Name</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="contact-fild-box">
+                                                                <div class="form-group"
+                                                                    ng-class="{ 'has-error': (onlineEnquiryForm.$submitted || onlineEnquiryForm.mobile.$touched) && onlineEnquiryForm.mobile.$invalid}">
+                                                                    <input numbers-only type="text" name="mobile"
+                                                                        ng-model="mobile"
+                                                                        class="form-control form-control-mobile"
+                                                                        placeholder="Mobile*" autocomplete="off"
+                                                                        ng-pattern="/^[0-9]/" required />
+                                                                    <span class="help-block floating"
+                                                                        ng-show="onlineEnquiryForm.$submitted || onlineEnquiryForm.mobile.$touched">
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.mobile.$error.required">Mobile
+                                                                            number is required</span>
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.mobile.$error.pattern">Not
+                                                                            a valid mobile number</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="contact-fild-box">
+                                                                <div class="form-group mb-2"
+                                                                    ng-class="{ 'has-error': (onlineEnquiryForm.$submitted || onlineEnquiryForm.program.$touched) && onlineEnquiryForm.program.$invalid}">
+                                                                    <input numbers-only type="text" name="mobile"
+                                                                        ng-model="mobile"
+                                                                        class="form-control form-control-mobile"
+                                                                        placeholder="Program*" autocomplete="off"
+                                                                        ng-pattern="/^[0-9]/" required />
+                                                                    <span class="help-block floating"
+                                                                        ng-show="onlineEnquiryForm.$submitted || onlineEnquiryForm.program.$touched">
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.program.$error.required">Select
+                                                                            any Program</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="contact-fild-box">
+                                                                <div class="form-group"
+                                                                    ng-class="{'has-error': (onlineEnquiryForm.$submitted || onlineEnquiryForm.state.$touched)}">
+                                                                    <input numbers-only type="text" name="mobile"
+                                                                        ng-model="mobile"
+                                                                        class="form-control form-control-mobile"
+                                                                        placeholder="State*" autocomplete="off"
+                                                                        ng-pattern="/^[0-9]/" required />
+                                                                    <span class="help-block floating"
+                                                                        ng-show="onlineEnquiryForm.$submitted || onlineEnquiryForm.state.$touched">
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.state.$error.required">Select
+                                                                            State</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="contact-fild-box">
+                                                                <div class="form-group"
+                                                                    ng-class="{ 'has-error': (onlineEnquiryForm.$submitted || onlineEnquiryForm.city.$touched)}">
+                                                                    <input numbers-only type="text" name="mobile"
+                                                                        ng-model="mobile"
+                                                                        class="form-control form-control-mobile"
+                                                                        placeholder="City*" autocomplete="off"
+                                                                        ng-pattern="/^[0-9]/" required />
+                                                                    <span class="help-block floating"
+                                                                        ng-show="onlineEnquiryForm.$submitted || onlineEnquiryForm.city.$touched">
+                                                                        <span class="help-block"
+                                                                            ng-show="onlineEnquiryForm.city.$error.required">Select
+                                                                            City</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="contact-fild-box text-center"
+                                                                style="margin-bottom:50px;">
+                                                                <div class="form-group">
+
+                                                                    <input type="hidden" id="referrerid"
+                                                                        name="referrer_name" value="" />
+                                                                    <input type="hidden" id="keyword" name="keyword"
+                                                                        value="" />
+                                                                    <input type="hidden" id="network" name="network"
+                                                                        value="" />
+                                                                    <input type="hidden" id="campaign_url"
+                                                                        name="campaign_url" value="" />
+                                                                    <input type="hidden" id="campaign_name"
+                                                                        name="campaign_name" value="" />
+                                                                    <input type="hidden" id="sourceId" name="source"
+                                                                        value="" />
+                                                                    <input type="hidden" id="orderid" name="orderid"
+                                                                        value="756" />
+                                                                    <input type="hidden" id="sitename"
+                                                                        name="sitename" />
+                                                                    <input type="hidden" id="utm_adgroup"
+                                                                        name="utm_adgroup" value="" />
+                                                                    <input type="hidden" id="utm_adposition"
+                                                                        name="utm_adposition" value="" />
+                                                                    <input type="hidden" id="utm_campaign"
+                                                                        name="utm_campaign" value="" />
+                                                                    <input type="hidden" id="utm_content"
+                                                                        name="utm_content" value="" />
+                                                                    <input type="hidden" id="utm_creative"
+                                                                        name="utm_creative" value="" />
+                                                                    <input type="hidden" id="utm_device"
+                                                                        name="utm_device" value="" />
+                                                                    <input type="hidden" id="utm_devicemodel"
+                                                                        name="utm_devicemodel" value="" />
+                                                                    <input type="hidden" id="utm_keyword"
+                                                                        name="utm_keyword" value="" />
+                                                                    <input type="hidden" id="utm_location"
+                                                                        name="utm_location" value="" />
+                                                                    <input type="hidden" id="utm_medium"
+                                                                        name="utm_medium" value="" />
+                                                                    <input type="hidden" id="utm_network"
+                                                                        name="utm_network" value="" />
+                                                                    <input type="hidden" id="utm_placement"
+                                                                        name="utm_placement" value="" />
+                                                                    <input type="hidden" id="utm_source"
+                                                                        name="utm_source" value="" />
+                                                                    <input type="hidden" id="utm_target"
+                                                                        name="utm_target" value="" />
+                                                                    <button id="btnSubmit" ladda="submitLoading"
+                                                                        type="submit"
+                                                                        class="btn btn_submit">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- awardsSection CLOSE -->
+    <!-- UGprogSection START -->
+
+    <section id="!#course" class="position-relative sec1 progSection">
+        <div id="inner64" class="commoninner clearfix">
+            <div class="widget-title title-black text-center borderCNTRr borderLtRt">
+                <h3 class="wow fadeInUp bg-white">Courses Offered </h3>
+            </div>
+            <div class="subtitle text-center">
+                <p class="wow fadeInUp">Click on a course to view course Duration and Intake</p>
+            </div>
+            <div class="progTabsec">
+                <div class="progTabsecinr">
+                    <div class="sec2HeadP1">
+                        <div id="horizontalTab">
+                            <ul class="resp-tabs-list dflexSTRHstart2">
+                                <li>B.Tech</li>
+                                <li>BCA</li>
+                                <li>B.SC</li>
+                                <li>BBA</li>
+                                <li>MCA</li>
+                                <li>MBA</li>
+                                <li>M.Tech</li>
+                            </ul>
+                            <div class="resp-tabs-container pt-3">
+                                <!-- tabs1start -->
+                                <div>
+                                    <div class="bluerow BBA1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-5 col-xs-12 cols">
+                                                                <div class="position-relative offer-title">
+                                                                    <!-- <label class="wow fadeInUp">BBA</label> -->
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/B.Tech.png"
+                                                                            alt="bba program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-7 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>B.Tech</label>
+                                                                        <p><b>Duration:</b> 4 Years </p>
+                                                                        <h6><b>Coureses Offered: </b> </h6>
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+
+                                                                                <li><span>Computer Science and
+                                                                                        Engineering</span> <span>Intake:
+                                                                                        180</span></li>
+                                                                                <li><span>Information Technology</span>
+                                                                                    <span>Intake: 120</span></li>
+                                                                                <li><span>Electronics & Communication
+                                                                                        Engineering</span> <span>Intake:
+                                                                                        120</span></li>
+                                                                                <li><span>Electrical Engineering</span>
+                                                                                    <span>Intake: 60</span></li>
+                                                                                <li><span>Electronics & Instrumentation
+                                                                                        Engineering</span> <span>Intake:
+                                                                                        60</span></li>
+                                                                                <li><span>Mechanical Engineering</span>
+                                                                                    <span>Intake: 60</span></li>
+                                                                                <li><span>Civil Engineering</span>
+                                                                                    <span>Intake: 60</span></li>
+                                                                                <li><span>Artificial Intelligence &
+                                                                                        Machine Learning</span>
+                                                                                    <span>Intake: 60</span></li>
+                                                                                <li><span>Computer Science and Business
+                                                                                        Systems (CSBS)</span>
+                                                                                    <span>Intake: 30</span></li>
+
+                                                                            </ul>
+                                                                            <!-- <!-- <h6><b>Eligibility:</b> </h6>
+                                                                            <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs1close -->
+                                <!-- tabs5start -->
+                                <div>
+                                    <div class="bluerow MA1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div style=" text-align: justify; text-justify: inter-word;"
+                                                                class="offer-contentinr">
+                                                                <!-- <h3 class="">Choose from in-demand specializations</h3> -->
+                                                                <p class="mt-2">Residing in the heart of the future IT
+                                                                    hub of Kolkata, Techno India College of Technology
+                                                                    exemplifies pride, honor and success at its acme.
+                                                                    The journey of success began in the year 2005.In
+                                                                    this short span it has blotted the IT field by
+                                                                    producing a bevy of fine young engineers to dwell in
+                                                                    the colossal multi nationals. Amongst all the
+                                                                    excellent engineering streams harbored
+                                                                    in this institution, one department that surfaces
+                                                                    and re-surfaces above all others is the department
+                                                                    of Bachelor of Computer Application. Started in the
+                                                                    year 2008, the department has
+                                                                    been able controlled and guided by Mr.Subhodip
+                                                                    Mukherjee, the head of the department. To be fair to
+                                                                    his traits one concise comment that would suitably
+                                                                    quote his attitude would be “laughter
+                                                                    is the best medicine, they say”.
+                                                                </p>
+                                                                <p style=" text-align: justify; text-justify: inter-word;"
+                                                                    class="d-none"> The man with the motto “Education is
+                                                                    the easiest way to prosperity and peaceful life”. A
+                                                                    hearty smile, a helpful hand and loads of talent and
+                                                                    experience
+                                                                    has been the arsenal of this man who is rightly
+                                                                    idolized by many aspiring to be good human beings
+                                                                    and excellent corporate professionals. The faculty
+                                                                    panel of this department is loaded
+                                                                    with dedicated and well equipped faculties of the
+                                                                    department of Master of Computer Application. They
+                                                                    go a long way in guiding the students through all
+                                                                    impediments. The recently added
+                                                                    feather to the cap is Dr. Bidyut Biman Sarkar,
+                                                                    mentor of this department, having 15 years academic
+                                                                    and 20 years industry experience in India and
+                                                                    abroad. He is also experienced in guiding
+                                                                    research scholars.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-4 col-xs-12 cols">
+                                                                <div class="position-relative">
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/bca.png"
+                                                                            alt="ma program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-8 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>BCA </label>
+                                                                        <p><b>Duration:</b> 3 Years </p>
+                                                                        <!-- <p><b>Application Deadline: </b> July 15, 2021 <b class="ml-2">Program Start Date: </b> July 31, 2021 </p> -->
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>Intake: 60</span></li>
+
+
+                                                                            </ul>
+                                                                            <!-- <p><b>Eligibility:</b> </p>
+                                                                                                            <div class="progList width100">
+                                                                                                                <ul class="dflexSTRHstart2">
+                                                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                                                </ul>
+                                                                                                            </div> -->
+                                                                        </div>
+
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs5close -->
+                                <!-- tabs6start -->
+                                <div>
+                                    <div class="bluerow MA1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div class="offer-contentinr">
+
+                                                                <!-- <p style=" text-align: justify; text-justify: inter-word;" class="mt-2">The Bachelor of Business Administration is a three-year Degree Program designed for those wishing to embark on a professional career in management. A business management program will prepare
+                                                                    you for specific needs of a business. The curriculum is designed to provide you a broad overview of all essentials of business and management and at the same time provide a deep-dive
+                                                                    into a functional area of specialization – Finance, Marketing, HRM, Analytics, International Finance and many more. </p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-4 col-xs-12 cols">
+                                                                <div class="position-relative">
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/bsc.png"
+                                                                            alt="ma program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-8 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>B.SC</label>
+                                                                        <p><b>Duration:</b> 3 Years </p>
+
+                                                                        <h6><b>Coureses Offered: </b> </h6>
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>B.Sc. in Cyber Security</span>
+                                                                                    <span>Intake: 60</span></li>
+                                                                                <li><span>B.Sc. in Data Science</span>
+                                                                                    <span>Intake: 60</span></li>
+
+                                                                            </ul>
+                                                                            <!-- <p><b>Eligibility:</b> </p>
+                                                                            <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs6close -->
+                                <!-- tabs3start -->
+                                <div>
+                                    <div class="bluerow MCA1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div class="offer-contentinr">
+                                                                <!-- <h3 class="">Choose from in-demand specializations</h3> -->
+                                                                <p style=" text-align: justify; text-justify: inter-word;"
+                                                                    class="mt-2">Techno India College of Technology
+                                                                    offers one of the best BBA programmes in the state.
+                                                                    The department of BBA was started in the year 2005.
+                                                                    The B.B.A. course of TICT is comparable to any world
+                                                                    class business school. The enviable team of faculty
+                                                                    members, state of the art classrooms, labs &
+                                                                    libraries all make B.B.A program the dream program
+                                                                    in Management studies. The B.B.A programme
+                                                                    is designed to bridge the gap between conceptual
+                                                                    learning and practical application to inculcate
+                                                                    professional and managerial expertise. The
+                                                                    department currently has around 120 students.
+                                                                    It is meant for students who are motivated,
+                                                                    disciplined, ready and eager to move ahead in the
+                                                                    business world. It is based on the premise that the
+                                                                    true mark of learning is not just what
+                                                                    you know but what you can do with what you know.
+                                                                </p>
+                                                                <p style=" text-align: justify; text-justify: inter-word;"
+                                                                    class="d-none"> Our priority is to provide students
+                                                                    a top-notch curriculum where emerging business
+                                                                    leaders can build on their professional experiences
+                                                                    and successfully contribute to their firms. This
+                                                                    innovative programme is facilitated by multi-media
+                                                                    learning environment enriched by face-to-face
+                                                                    faculty mentoring and coaching. This
+                                                                    prestigious program in management leading to a BBA
+                                                                    degree is spread over three years and consists of
+                                                                    six semesters, each approximately of six months
+                                                                    duration. The program therefore lays
+                                                                    strong emphasis in connecting theory and
+                                                                    application. In the various courses key concepts are
+                                                                    covered and then students are exposed to how they
+                                                                    are played out in real business situations
+                                                                    using case studies. The seminal effect of our
+                                                                    pedagogy is placement of our B.B.A in all the
+                                                                    corporate houses of repute. In a span of less than a
+                                                                    decade, our students have ensured their
+                                                                    presence at responsible positions in Multinationals
+                                                                    and Indian companies.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-4 col-xs-12 cols">
+                                                                <div class="position-relative">
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/bba.png"
+                                                                            alt="mca program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-8 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>BBA</label>
+                                                                        <p><b>Duration:</b> 3 Years </p>
+                                                                        <!-- <p><b>Application Deadline: </b> July 15, 2021 <b class="ml-2">Program Start Date: </b> July 31, 2021 </p> -->
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>Intake: 60</span></li>
+
+                                                                            </ul>
+                                                                            <!-- <p><b>Eligibility:</b> </p>
+                                                                            <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs3close -->
+                                
+                                <!-- tabs4start -->
+                                <div>
+                                    <div class="bluerow MCom1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div class="offer-contentinr">
+                                                                <!-- <h3 class="">Choose from in-demand specializations</h3> -->
+                                                                <p style=" text-align: justify; text-justify: inter-word;"
+                                                                    class="mt-2">Residing in the heart of the future IT
+                                                                    hub of Kolkata, Techno India College of Technology
+                                                                    exemplifies pride, honor and success at its acme.
+                                                                    The journey of success began in the year 2005.In
+                                                                    this short span it has blotted the IT field by
+                                                                    producing a bevy of fine young engineers to dwell in
+                                                                    the colossal multi nationals. Amongst all the
+                                                                    excellent engineering streams harbored
+                                                                    in this institution, one department that surfaces
+                                                                    and re-surfaces above all others is the department
+                                                                    of Master of Computer Application. Started in the
+                                                                    year 2006, the department has been
+                                                                    able controlled and guided by Mr.Subhodip Mukherjee,
+                                                                    the head of the department. To be fair to his traits
+                                                                    one concise comment that would suitably quote his
+                                                                    attitude would be “laughter
+                                                                    is the best medicine, they say”. The man with the
+                                                                    motto: “Education is the easiest way to prosperity
+                                                                    and peaceful life”. </p>
+                                                                <p style=" text-align: justify; text-justify: inter-word;"
+                                                                    class="d-none"> A hearty smile, a helpful hand and
+                                                                    loads of talent and experience
+                                                                    has been the arsenal of this man who is rightly
+                                                                    idolized by many aspiring to be good human beings
+                                                                    and excellent corporate professionals. Alongside the
+                                                                    dedicated and well equipped faculty
+                                                                    panel goes a long way in guiding the students
+                                                                    through all impediments. The recently added feather
+                                                                    to the cap is Dr. Bidyut Biman Sarkar, mentor of
+                                                                    this department, having 15 years academic
+                                                                    and 20 years industry experience in India and
+                                                                    abroad. He is also experienced in guiding research
+                                                                    scholars. The maximum intake capacity of the
+                                                                    department is 60 students.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-4 col-xs-12 cols">
+                                                                <div class="position-relative">
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/mca.png"
+                                                                            alt="mcom program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-8 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>MCA </label>
+                                                                        <p><b>Duration:</b> 2 Years </p>
+                                                                        <!-- <p><b>Application Deadline: </b> July 15, 2021 <b class="ml-2">Program Start Date: </b> July 31, 2021 </p> -->
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>Intake: 120</span></li>
+
+
+                                                                            </ul>
+                                                                            <!-- <p><b>Eligibility:</b> </p>
+                                                                            <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs4close -->
+                                 <!-- tabs2start -->
+                                 <div>
+                                    <div class="bluerow BCom1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div class="offer-contentinr">
+                                                                <!-- <h3 class="">Choose from in-demand specializations</h3> -->
+                                                                <!-- <p style=" text-align: justify; text-justify: inter-word;" class="mt-2">The Bachelor of Business Administration is a three-year Degree Program designed for those wishing to embark on a professional career in management. A business management program will prepare
+                                                                    you for specific needs of a business. The curriculum is designed to provide you a broad overview of all essentials of business and management and at the same time provide a deep-dive
+                                                                    into a functional area of specialization – Finance, Marketing, HRM, Analytics, International Finance and many more. </p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-5 col-xs-12 cols">
+                                                                <div class="position-relative offer-title">
+                                                                    <!-- <label>B.Com</label> -->
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/mba.png"
+                                                                            alt="bcom program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-7 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>MBA</label>
+                                                                        <p><b>Duration:</b> 2 Years </p>
+                                                                        <!-- <h6><b>Coureses Offered: </b> </h6>
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>MTech in Electrical
+                                                                                        Engineering</span> <span>Intake:
+                                                                                        9</span></li>
+                                                                            </ul> -->
+                                                                            <!-- <p><b>Eligibility:</b> </p> -->
+                                                                            <!-- <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!-- tabs2close -->
+                                                                    <!-- tabs2start -->
+                                <div>
+                                    <div class="bluerow BCom1 doubleboxxxx">
+                                        <div>
+                                            <div class="program-row p-2">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="offer-content">
+                                                            <div class="offer-contentinr">
+                                                                <!-- <h3 class="">Choose from in-demand specializations</h3> -->
+                                                                <!-- <p style=" text-align: justify; text-justify: inter-word;" class="mt-2">The Bachelor of Business Administration is a three-year Degree Program designed for those wishing to embark on a professional career in management. A business management program will prepare
+                                                                    you for specific needs of a business. The curriculum is designed to provide you a broad overview of all essentials of business and management and at the same time provide a deep-dive
+                                                                    into a functional area of specialization – Finance, Marketing, HRM, Analytics, International Finance and many more. </p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="offer-content2 clearfix dflexSTRHstart2">
+                                                            <div class="col-sm-5 col-xs-12 cols">
+                                                                <div class="position-relative offer-title">
+                                                                    <!-- <label>B.Com</label> -->
+                                                                    <figure>
+                                                                        <img class="img-responsive"
+                                                                            src="images/programs/M.Tech.png"
+                                                                            alt="bcom program">
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-7 col-xs-12 cols">
+                                                                <div class="offer-contentinr2">
+                                                                    <div class="position-relative">
+                                                                        <label>M.Tech</label>
+                                                                        <p><b>Duration:</b> 2 Years </p>
+                                                                        <h6><b>Coureses Offered: </b> </h6>
+                                                                        <div class="progList">
+                                                                            <ul class="dflexSTRHstart2">
+                                                                                <li><span>MTech in Electrical
+                                                                                        Engineering</span> <span>Intake:
+                                                                                        9</span></li>
+                                                                            </ul>
+                                                                            <!-- <p><b>Eligibility:</b> </p> -->
+                                                                            <!-- <div class="progList width100">
+                                                                                <ul class="dflexSTRHstart2">
+                                                                                    <li><span>Pass in the (10+2) examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE recognized by the State or Central Government.  </span></li>
+                                                                                    <li><span>Candidates who are due to appear in the (10+2) examination are also eligible to apply.</span></li>
+                                                                                </ul>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <div class="aplybtnsec">
+                                                                            <a href="#applyBox" class="aplybtn">Apply
+                                                                                Now </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs2close -->
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- UGProgSection CLOSE -->
+    <!-- alumniSection START -->
+    <section id="!#Almuni" style="background-color: rgb(255, 255, 255);" class="sec1 alumnisec">
+        <div id="inner66" class="commoninner clearfix">
+            <div class="widget-title title-black text-center borderCNTRr borderLtRt">
+                <h3 class=" wow fadeInUp">Our ALUMNI </h3>
+            </div>
+            <div class="sec2after">
+                <div class="sec1Head">
+                    <div class="owl-carousel owl-theme" id="alumni-slider">
+                        <div class="alumnibxcollab ouralumniBG1 noBG text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img1.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Anik Chakraborty</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img1.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG2 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img2.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Soham Roy </h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img1.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG3 text-center wow zoomIn" data-wow-delay=".2s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img3.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Sujit Bhattacharyaya</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img3.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG4 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img4.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Chandrima Mukherjee</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img4.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG1 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img5.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Janapriyo Maitra</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img5.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG2 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img6.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Swarnalina Laha</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img6.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG3 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img7.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Tanushree Sarkar</h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img3.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <div class="alumnibxcollab ouralumniBG4 text-center wow zoomIn" data-wow-delay=".1s">
+                            <figure>
+                                <img class="img-responsive" src="images/alumni/alumni_img8.png" alt="Our ALUMNI" />
+                            </figure>
+                            <div class="alumniContent">
+                                <h5>Kumar Anubhav </h5>
+                                <a class=""><img class="img-responsive" src="images/alumni/comp_img5.png"
+                                        alt="Our ALUMNI" /> </a>
+                            </div>
+                        </div>
+                        <!-- repeat-all -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- alumniSection CLOSE -->
+    <!-- whySection START -->
+    <section id="!#About" class="sec3 aboutUS">
+        <div id="inner7a" class="commoninner clearfix">
+            <div class="sec3Head dflexSTRHCNTR">
+                <div class="col-sm-12 col-xs-12 about-left nopd">
+                    <div class="widget-title title-white text-center borderCNTRr borderLtRt2">
+                        <h3 class="wow fadeInUp bg-blue32">About Techno International New town</h3>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 aboutUS-left text-center nopd">
+                    <p style=" text-align: justify; text-justify: inter-word;"
+                        class="text-center text-white wow fadeInUp" data-wow-delay=".1s">Techno India College Of
+                        Technology is one of the youngest colleges of the Techno India Group. It started its journey in
+                        the year of 2005.The college is the logical development and the rational conclusion of the
+                        mission and the vision of the Techno India Group which is one of the largest knowledge
+                        management groups in India.
+
+                        The academic community finds inspiration from India’s ancient past where education was closely
+                        associated with the man-making mission. We believe that education is the manifestation of the
+                        perfection already in man. We have tried to build a tuneful balance between India’s golden past
+                        and her desired destiny to be a super-power in the post -modern age.
+
+                        The institute has developed extensive computing facilities. </p>
+                    <p style=" text-align: justify; text-justify: inter-word;"
+                        class="d-none text-center text-white wow fadeInUp" data-wow-delay=".1s"> The overall placement
+                        record has been encouraging and it keeps a close relation with the corporate world. The library
+                        facilities have helped the students to secure high marks in the university examination. The
+                        college always tries to maintain a harmonious balance between the various wings of the academic
+                        sections. We provide hostel facilities to the students. The administration respects the human
+                        relations approach as the main pedestal of its administrative philosophy.
+
+                        We have renowned academicians who take active interest to improve the teaching-learning process.
+                        We have turned the institute into a temple of learning where the industry- academic institute
+                        interface finds its fulfillment. </p>
+
+                    <div class="section3Content clearfix">
+
+                        <div class="section3Box section3BoxRT aboutTintBox">
+
+                            <div class="section3Grid dflexSTRHCNTR clearfix">
+                                <div style="border: none;" class="section3GridBox wow flipInY" data-wow-duration=".7s"
+                                    data-wow-delay=".1s">
+                                    <div class="boxinner abtboxBg1 abtboxPad">
+                                        <div class="figureCaption text-center dflexAlignitmCNTRr color_yelow">
+                                            <h4 class="">AICTE</h4>
+                                            <p class="">Approved</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="border: none;" class="section3GridBox wow flipInY" data-wow-duration="1s"
+                                    data-wow-delay=".3s">
+                                    <div class="boxinner abtboxBg2 abtboxPad">
+                                        <div class="figureCaption text-center dflexAlignitmCNTRr color_yelow">
+                                            <h4 class="">MAKAUT</h4>
+                                            <p class="">Affiliated</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="border: none;" class="section3GridBox wow flipInY" data-wow-duration="1s"
+                                    data-wow-delay=".4s">
+                                    <div class="boxinner abtboxBg3 abtboxPad">
+                                        <div class="figureCaption text-center dflexAlignitmCNTRr color_yelow">
+                                            <h4 class="">IIT-B</h4>
+                                            <p class="">Remote Center</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="border: none;" class="section3GridBox wow flipInY" data-wow-duration="1s"
+                                    data-wow-delay=".6s">
+                                    <div class="boxinner abtboxBg4 abtboxPad">
+                                        <div class="figureCaption text-center dflexAlignitmCNTRr color_yelow">
+                                            <h4 class="">TCS</h4>
+                                            <p class="">Accredited</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- whySection CLOSE -->
+    <!-- collabSection START -->
+    <!-- featureSection CLOSE -->
+    <!-- partnersSection START -->
+    <section class="sec1 recsec">
+        <div id="inner63" class="commoninner clearfix">
+            <div class="widget-title title-black text-center borderCNTRr borderLtRt">
+                <h3 class="wow fadeInUp bg-yellow">Our Hiring Partners </h3>
+            </div>
+            <div class="sec2after">
+                <div class="sec1Head">
+                    <div class="owl-carousel owl-theme" id="rec-slider">
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".1s">
+                            <img src="images/recruit/place-img1.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img2.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".1s">
+                            <img src="images/recruit/place-img3.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img4.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img5.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img6.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img7.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img8.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img9.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img10.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img11.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img12.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img13.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img14.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img15.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img16.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img17.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img18.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img19.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img20.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img21.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img22.png" alt="Top Recruiters" />
+                        </div>
+                        <div class="offeredbxrec text-center wow zoomIn" data-wow-delay=".2s">
+                            <img src="images/recruit/place-img23.png" alt="Top Recruiters" />
+                            <img src="images/recruit/place-img24.png" alt="Top Recruiters" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- partnersSection CLOSE -->
+
+    <!-- AboutUs START -->
+    <section id="!#contact" class="sec3 aboutsec">
+        <div id="inner7" class="commoninner clearfix">
+            <div class="sec3Head">
+                <div class="col-sm-12 col-xs-12 nopd">
+                    <div class="widget-title title-white text-center borderCNTRr borderLtRt">
+                        <h3 style="background: transparent;" class="wow fadeInUp ">Contact Us</h3>
+                    </div>
+                </div>
+                <div class="row dflexSTRHstart2">
+                    <div style="display: flex; align-items: center;" class="col-sm-6 col-xs-12 about-right">
+                        <iframe width="570" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?width=520&height=400&hl=en&q=Techno%20International%20New%20Town%20Block%20-%20DG%201/1,%20Action%20Area%201%20New%20Town,%20Rajarhat,%20Kolkata%20-%20700156%20Kolkata+(Techno%20International%20Newtown)&t=&z=12&ie=UTF8&iwloc=B&output=embed"></iframe>
+                        <a href='https://embedmap.org/'>embed google map in website</a>
+                        <script type='text/javascript'
+                            src='https://embedmaps.com/google-maps-authorization/script.js?id=1ef234961d839dab85c97407f9adc7ce34706d36'></script>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 about-left">
+                        <div class="aboutinner">
+                            <div class="about-content text-white">
+                                <p class="wow fadeInUp" data-wow-delay=".1s">Our college, Techno International New Town,
+                                    pledges to shine and excel by imparting quality education that is modern and
+                                    up-to-date, so as to be at par with the diverse requirements of the society. We
+                                    encourage persistent intellectual and emotional development of the students as well
+                                    as the faculty members and staff, in order to ensure a healthy and positive
+                                    ambience. We are committed to accomplish our mission by nourishing four
+                                    interdependent core values.
+
+
+
+                                </p>
+                                <div style="display: flex; flex-direction: row; justify-content: center; width: 100%;text-align: center;flex-wrap: wrap;"
+                                    class="col-sm-6 col-xs-12 dist_text">
+                                    <span style="margin-right: 10px;"><a href="tel:9674112076">Call : 9674112076</a>
+                                    </span>
+                                    <span style="margin-right: 10px;"><a href="tel:9674112079">Call : 9674112079</a>
+                                    </span>
+
+                                </div>
+                                <div style="display: flex; flex-direction: row; justify-content: center; width: 100%;text-align: center;flex-wrap: wrap;"
+                                    class="col-sm-6 col-xs-12 dist_text">
+
+                                    <span><a href="https://www.facebook.com/tict.edu.in">Facebook</a> </span>
+                                    <span><a href="mailto:info@tict.edu.in">info@tict.edu.in</a> </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- AboutUs CLOSE -->
+    <!-- aboutUS START -->
+    <!-- aboutUS CLOSE -->
+    <!-- TESTIMONIALS START -->
+    <!-- TESTIMONIALS CLOSE -->
+
+
+    <!-- jQuery plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- fancybox -->
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!-- responsive-tabs -->
+    <script src="css/tab/easy-responsive-tabs.js"></script>
+    <!-- WOW START -->
+    <script src="css/popup/jquery.magnific-popup.min.js"></script>
+    <!-- validationEngine FORM START -->
+    <script src="js/form/jquery.validationEngine.js"></script>
+    <script src="js/form/jquery.validationEngine-en.js"></script>
+    <script src="js/form/script.js"></script>
+    <script src="js/state.js"></script>
+    <!-- Silder Owl Carousel JS -->
+    <script src="css/carousel/owl.carousel.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/toucheffects.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- course -->
+    <script src="js/course.js"></script>
+
+
+
+    <script>
+        var hubspotutk = "f35245e8ba29028682e445421984442e";
+        var ip_addr = "162.158.165.178";
+
+    </script>
+    <script src="assets/js/spin.min.js"></script>
+    <script src="assets/js/ladda.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    <script src="assets/js/angular-ladda.min.js"></script>
+    <script src="assets/js/o_nline_hubspot_angular.js"></script>
+    <script>
+        var a = location.href;
+        var b = a.split('?')[1];
+        if (typeof b !== "undefined") {
+            var cta = document.getElementsByTagName("a");
+            for (var i = 0; i < cta.length; i++) {
+                var hrf = cta.item(i).href;
+                if (hrf.indexOf("?") != -1) {
+                    cta.item(i).href = hrf + "&" + b;
+                } else {
+                    cta.item(i).href = hrf + "?" + b;
+                }
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            // 1
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                closed: 'accordion', // Start closed if in accordion view
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+            $('#verticalTab').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true
+            });
+            // 2
+            // $('.collapse').collapse();
+        });
+    </script>
+</body>
+
+</html>
